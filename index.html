@@ -54,14 +54,43 @@
 		</section>
 		
 		<section id="events" class="section-al container">
-				<h1>EVENTS</h1>
+			<div class="section black" id="section1">
+				<h2>Events</h2>
+				<a class="navLink" href="#eventGroups">Go to events</a>
+			</div>
+			<div class="section white" id="eventGroups">
+				<h2>Events</h2>
+				<a class="navLink" href="#eventsList">Go to all events</a>
+			</div>
+			<div class="section black" id="eventsList">
+				<h2>Events List</h2>
+				<a class="navLink" href="#section1">Back to Groups</a>
+			</div>
 		</section>
 		
 		
 		<!-- Sections end -->
 	<!-- Scripts -->
 	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
     <script src="js/bootstrap.min.js"></script>
+	<script>
+	$(function() {
+                $('a.navLink').bind('click',function(event){
+                    var $anchor = $(this);
+                    /*
+                    if you want to use one of the easing effects:
+                    $('html, body').stop().animate({
+                        scrollLeft: $($anchor.attr('href')).offset().left
+                    }, 1500,'easeInOutExpo');
+                     */
+                    $('html, body').stop().animate({
+                        scrollLeft: $($anchor.attr('href')).offset().left
+                    }, 1000);
+                    event.preventDefault();
+                });
+            });
+			</script>
 	<!-- --------------------------- ->
 	</body>
 </html>
