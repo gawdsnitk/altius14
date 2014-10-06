@@ -58,41 +58,50 @@ body,html{
 	padding:20px;
 }
 
-/*asdsada*/
-.section{
-    margin:0px;
-    bottom:0px;
-    width:33.3333333333333%;
-    float:left;
-    height:100%;
-    text-shadow:1px 1px 2px #f0f0f0;
+/*Horizontal Events*/
+.horizontalSection-al{
+  margin:0px;
+  bottom:0px;
+  width:33.3333333333333%;
+  float:left;
+  height:100%;
+	padding-top:50px;
+  text-shadow:1px 1px 2px #f0f0f0;
 }
-.section h2{
-    margin:50px 0px 30px 50px;
+.horizontalSection-al .eventBox-al{
+	display: inline-block;
+	padding:50px;
+	font-size:3em;
 }
-.black{
+.black-al{
     color:#fff;
    
     background:#000 url(../images/black.jpg) no-repeat top right;
 }
-.white{
+.white-al{
     color:#000;
     background:#fff url(../images/white.jpg) no-repeat top right;
 }
-.black a{
-    display:block;
-    color:#f0f0f0;
+.categoryList-al{
+	float:left;
 }
-.black a:hover{
-    text-decoration:none;
-    color:#fff;
+.eventsList-al{
+	float: left;
+	padding:10px;
+	width: 1100px;
+	height:100%;
+	margin-left:20px;
+	box-shadow: 1px 1px 5px grey;
 }
-
-.white a{
-    display:block;
-    color:#222;
+.categoryList-al li{
+	list-style-type:none;
+	padding:20px;
+	margin:10px;
+	width:150px;
+	border-bottom:1px solid rgb(210,210,210);
 }
-.white a:hover{
-    text-decoration:none;
-    color:#000;
+.categoryList-al li:last-child{
+}
+.active-al{
+	box-shadow: 0px 0px 2px darkgrey;
 }
