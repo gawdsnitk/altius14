@@ -5,6 +5,7 @@
 		<!-- StyleSheets -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/custom.css" rel="stylesheet">
+		<link href="css/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet">
 		
 		<!-- --------------------------------  -->
 	</head>
@@ -56,7 +57,7 @@
 		
 		<section id="events" class="section-al container">
 			<div class="horizontalSection-al black-al" id="section1">
-				<a class="navLink eventBox-al" href="#eventGroups">Events</a>
+				<a class="navLink eventBox-al" href="#eventGroups">Events<br><i class="fa fa-pied-piper-alt"></i></a>
 			</div>
 			<div class="horizontalSection-al white-al" id="eventGroups">
 				<ul class="categoryList-al">
@@ -71,6 +72,11 @@
 				<div class="eventsList-al">
 					There are six societies which organise Altius. Events organised by these societies have no bar of branch. Anyone, not from final year,
 					can take part in any event organised by any society. Click any Society name on the left to check out all the events.
+					<ul class="eventsBoxList-al">
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
 				</div>
 			</div>
 			<div class="horizontalSection-al black-al" id="events">
@@ -90,6 +96,12 @@
     <script src="js/bootstrap.min.js"></script>
 	<script>
 	$(function() {
+		$(window).scroll(function() {
+			if($(document).scrollTop()!=0)
+			$('.navbar').css('padding','0');
+			else
+			$('.navbar').css('padding','20px');
+		});
                 $('a.navLink').bind('click',function(event){
                     var $anchor = $(this);
                     /*
@@ -106,5 +118,6 @@
             });
 			</script>
 	<!-- --------------------------- ->
+	
 	</body>
 </html>
