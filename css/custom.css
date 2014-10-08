@@ -27,6 +27,10 @@ a:hover, a:active, a:focus{
 	background:none !important;
 	color:red !important;
 }
+.navbar-brand img{
+	height:40px;
+	transition:all 1s;
+}
 
 /*Sections style*/
 .section-al{
@@ -66,7 +70,7 @@ a:hover, a:active, a:focus{
 	height:100%;
 	width:12000px;
 	padding: 0;
-	background:red;//black;
+	//background:red;//black;
 	color:white;
 	//text-align:center;
 }
@@ -119,6 +123,40 @@ a:hover, a:active, a:focus{
 }
 .categoryList-al{
 	float:left;
+	font-family:open sans;
+	text-align:center;
+}
+.categoryList-al li{
+	list-style-type:none;
+	padding:20px;
+	margin:10px;
+	width:150px;
+	//border-bottom:1px solid rgb(210,210,210);
+	color:white;
+}
+.categoryList-al li:hover{
+	cursor: pointer;
+	box-shadow: 0px 2px 2px black;
+}
+.categoryList-al li:last-child{
+}
+.categoryList-al li:nth-child(1){
+	background:#B3C833;
+}
+.categoryList-al li:nth-child(2){
+	background:#CE5043;
+}
+.categoryList-al li:nth-child(3){
+	background:#1AA1E1;
+}
+.categoryList-al li:nth-child(4){
+	background:#3F5CA9;
+}
+.categoryList-al li:nth-child(5){
+	background:#658092;
+}
+.categoryList-al li:nth-child(6){
+	background:#4ca8a1;
 }
 .eventsList-al{
 	float: left;
@@ -127,15 +165,20 @@ a:hover, a:active, a:focus{
 	height:100%;
 	margin-left:20px;
 	box-shadow: 1px 1px 5px grey;
+	background: #E5E5E5;
 }
-.categoryList-al li{
-	list-style-type:none;
-	padding:20px;
-	margin:10px;
-	width:150px;
-	border-bottom:1px solid rgb(210,210,210);
-}
-.categoryList-al li:last-child{
+.eventsBoxList-al li{
+	list-style-type: none;
+	display: inline-block;
+	width:100px;
+	height:100px;
+	line-height: 100px;
+	text-align: center;
+	background:white;
+	border-radius: 2px;	
+	box-shadow:0px 0px 3px grey;
+	margin:40px 50px;
+	float: left;
 }
 .active-al{
 	box-shadow: 0px 0px 2px darkgrey;
