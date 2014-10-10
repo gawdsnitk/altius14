@@ -1,0 +1,16 @@
+.login-button{
+	width:100%;
+	text-align: right;
+	padding:1%;
+}
+.login-button button{
+	display: inline-block;
+}
+.update-status .cbp_tmlabel{
+	//background: whitesmoke !important;
+}
+.status{
+	resize: none;
+	width:100%;
+	margin:2% auto;
+}

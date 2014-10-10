@@ -1,0 +1,43 @@
+.popup {
+	background:white; 
+	height:100px; 
+	top:40%; 
+	z-index:100; 
+	border:3px solid; 
+	border-color:black; 
+	visibility:hidden;
+}
+.eventlist {
+	padding: 10px; 
+	background:white; 
+	height:750px;
+}
+.eventname {
+	background:skyblue; 
+	margin:5px; 
+	left:20px; 
+	height: 50px; 
+	font-size: 25px !important;
+}
+.addNewEvent {
+	height:40px; 
+	left:10px; 
+	margin:10px; 
+	bottom:15%;
+	position:absolute;	
+}
+.eventDetail{
+	background:skyblue; 
+	height:1000px; 
+	padding: 10px; 
+	overflow:hidden; 
+	visibility:hidden;
+	overflow:hidden;
+}
+.cover {
+	position:absolute; 
+	background:skyblue; 
+	height:750px; 
+	padding: 10px;
+	overflow:hidden;
+}
