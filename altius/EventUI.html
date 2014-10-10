@@ -8,12 +8,12 @@
 	<body>
 			
 		<div class = "container-fluid">
-			<div class="col-md-offset-5 col-md-3" style="font-size:20px">Register the Event </div>
+			<div class="col-md-offset-5 col-md-3" style="font-size:20px">Add the Event </div>
 			<form class="form-horizontal" style= "padding-top:50px" role="form" method="post" id="eventRegister" name="eventRegister">
 				<div class="form-group">
 					<label for="eventName" class="col-sm-2 control-label">Event Name</label>
 					<div class="col-sm-9">
-						<input type="text" class="form-control" placeholder="Enter Event Name" id="eventName" name="eventName">
+						<input type="text" class="form-control" placeholder="Enter Event Name" id="eventName" name="eventName" required>
 					</div>
 			    </div>
 				
@@ -34,11 +34,11 @@
 				<div class="form-group">
 				   <label for="coordinator1" class="col-sm-2 control-label" style="resize:none">Coordinator #1</label>
 				   <div class="col-sm-3">
-				   <input type="text" class="form-control" placeholder="Enter Coordinator Name" id="coordinator1" name="coordinator1">
+				   <input type="text" class="form-control" placeholder="Enter Coordinator Name" id="coordinator1" name="coordinator1" required>
 				   </div>
 				   <label for="phone1" class="col-sm-2 col-md-offset-1 control-label" style="resize:none">Phone No.</label>
 				   <div class="col-sm-3">
-				   <input type="text" class="form-control" placeholder="Enter Phone No." id="phone1" name="phone1">
+				   <input type="text" class="form-control" placeholder="Enter Phone No." id="phone1" name="phone1" required>
 				   </div>
 			    </div>
 				
@@ -96,7 +96,7 @@
 				
 			    <div class="form-group">
 				  <div class="col-sm-offset-2 col-sm-10">
-					 <button type="button" id="submitButton" class="btn btn-default" onclick="register()" >Register</button>
+					 <button type="submit" id="submitButton" class="btn btn-default" onclick="register()" >Add</button>
 				  </div>
 				</div>
 				<input type="hidden" id="eventstatus"/>  
@@ -106,7 +106,11 @@
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script>
 		
-		function register() {
+		function register() 
+			{
+			if($('#eventName').val()=''){
+			return;
+}
 			var data = {
 				"eventname"			: 	$('#eventName').val(),
 				"description"		: 	$('#eventdescription').val(),

@@ -13,7 +13,7 @@
 			
 				 <div id="eventList" class="col-xs-3 col-md-3 eventList pull-left" style="margin-top:5%">                       
                            <button type="button" onclick="addNewEvent()" class="col-md-10 btn btn-default addNewEvent">
-				<span class="glyphicon glyphicon-plus"></span>Add New Event</button>
+				<i class="glyphicon glyphicon-plus"></i> Add New Event</button>
                                 </div> 
 	
 				<div id="eventdetail" class="col-md-9 col-sm-9 eventDetail" >
