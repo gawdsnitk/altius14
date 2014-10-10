@@ -179,7 +179,26 @@ a:hover, a:active, a:focus{
 	box-shadow:0px 0px 3px grey;
 	margin:40px 50px;
 	float: left;
+	cursor:pointer;
+	font-family:open sans;
 }
 .active-al{
 	box-shadow: 0px 0px 2px darkgrey;
+}
+.event-al{
+	width:20%;
+	height:100%;
+}
+.event-al .event-component-al{
+	float:left;
+}
+.event-al #event-details-list-al li{
+	list-style-type: none;
+	padding:20%;
+	text-align: center;
+	//border-bottom:1px solid white;
+	box-shadow: 0px 0px 2px white;
+}
+.event-al #event-details-list-al li:nth-child(odd){
+	background:#ababab;
 }
