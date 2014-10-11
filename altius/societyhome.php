@@ -8,7 +8,7 @@
 		<div class="container-fluid" >
 			<div class="row">
 				<div class = "navbar navbar-fixed-top" role = "navigation">
-					<a class = "btn btn-primary pull-right" style="margin:2% 2% 0 0">Logout</a>
+					<a class = "btn btn-primary pull-right" style="margin:2% 2% 0 0"href="http://178.62.27.102/altius/laravel/public/logout">Logout</a>
 				</div>
 			
 				 <div id="eventList" class="col-xs-3 col-md-3 eventList pull-left" style="margin-top:5%">                       

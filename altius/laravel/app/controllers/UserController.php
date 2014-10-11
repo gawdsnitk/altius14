@@ -22,6 +22,8 @@
 		{
 			echo "Successfully Logged out";
 			Session::flush();
+			return Redirect::to('http://www.altius14.org/altius');
+			header('location:http://178.62.27.102');
 		}
 	}
 	

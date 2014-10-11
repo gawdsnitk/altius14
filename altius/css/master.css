@@ -10,14 +10,12 @@
 .eventlist {
 	padding: 10px; 
 	background:white; 
-	height:750px;
 }
 .eventname {
 	background:skyblue; 
 	margin:5px; 
 	left:20px; 
-	height: 50px; 
-	font-size: 25px !important;
+	font-size: 14px !important;
 }
 .addNewEvent {
 	height:40px; 
@@ -27,7 +25,7 @@
 	position:absolute;	
 }
 .eventDetail{
-	background:skyblue; 
+	box-shadow:1px 1px 2px black; 
 	height:1000px; 
 	padding: 10px; 
 	overflow:hidden; 
@@ -35,8 +33,8 @@
 	overflow:hidden;
 }
 .cover {
-	position:absolute; 
-	background:skyblue; 
+	position:absolute;
+	box-shadow:1px 1px 2px black; 
 	height:750px; 
 	padding: 10px;
 	overflow:hidden;

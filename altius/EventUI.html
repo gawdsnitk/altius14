@@ -8,7 +8,7 @@
 	<body>
 			
 		<div class = "container-fluid">
-			<div class="col-md-offset-5 col-md-3" style="font-size:20px">Add the Event </div>
+			<div class="col-md-offset-5 col-md-3" style="font-size:20px">Register the Event </div>
 			<form class="form-horizontal" style= "padding-top:50px" role="form" method="post" id="eventRegister" name="eventRegister">
 				<div class="form-group">
 					<label for="eventName" class="col-sm-2 control-label">Event Name</label>
@@ -96,7 +96,7 @@
 				
 			    <div class="form-group">
 				  <div class="col-sm-offset-2 col-sm-10">
-					 <button type="submit" id="submitButton" class="btn btn-default" onclick="register()" >Add</button>
+					 <button type="submit" id="submitButton" class="btn btn-default" onclick="register()" >Register</button>
 				  </div>
 				</div>
 				<input type="hidden" id="eventstatus"/>  
@@ -106,32 +106,30 @@
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script>
 		
-		function register() 
-			{
-			if($('#eventName').val()=''){
-			return;
-}
+		function register() {
+			if($('#eventName').val()==''||$('#coordinator1').val()==''||$('#phone1').val()=='')
+				return;
 			var data = {
-				"eventname"			: 	$('#eventName').val(),
-				"description"		: 	$('#eventdescription').val(),
-				"rules"				: $('#eventRules').val(),
-				"coordinator1"		: 	$('#coordinator1').val(),
-				"coordinator2"		: 	$('#coordinator2').val(),
-				"coordinator3"		: 	$('#coordinator3').val(),
-				"coordinator4"		: 	$('#coordinator4').val(),
-				"phone1"			: 	$('#phone1').val(),
-				"phone2"			: 	$('#phone2').val(),
-				"phone3"			: 	$('#phone3').val(),
-				"phone4"			: 	$('#phone4').val(),
-				"category"			: 	$('#category').val(),
-				"time"				: 	$('#time').val(),
-				"venue"				: 	$('#venueName').val(),
-				"eventstatus"		:	$('#eventstatus').val()
+				"eventname"	: 	$('#eventName').val(),
+				"description"	: 	$('#eventdescription').val(),
+				"rules"		: 	$('#eventRules').val(),
+				"coordinator1"	: 	$('#coordinator1').val(),
+				"coordinator2"	: 	$('#coordinator2').val(),
+				"coordinator3"	: 	$('#coordinator3').val(),
+				"coordinator4"	: 	$('#coordinator4').val(),
+				"phone1"	: 	$('#phone1').val(),
+				"phone2"	: 	$('#phone2').val(),
+				"phone3"	: 	$('#phone3').val(),
+				"phone4"	: 	$('#phone4').val(),
+				"category"	: 	$('#category').val(),
+				"time"		: 	$('#time').val(),
+				"venue"		: 	$('#venueName').val(),
+				"eventstatus"	:	$('#eventstatus').val()
 			}
 			data = $(this).serialize() + '&' + $.param(data);
 			$.ajax ({
 				type		:	"POST",
-				url			:	"laravel/public/addnewevent",
+				url		:	"laravel/public/addnewevent",
 				dataType	:	"json",
 				data		:	data,
 				success		:	function(msg) 
