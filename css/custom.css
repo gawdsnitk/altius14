@@ -257,8 +257,6 @@ a:hover, a:active, a:focus{
 	cursor: pointer;
 	box-shadow: 0px 2px 2px black;
 }
-.categoryList-al li:last-child{
-}
 .categoryList-al li:nth-child(1){
 	background:#B3C833;
 }
@@ -313,22 +311,29 @@ a:hover, a:active, a:focus{
 .active-al{
 	box-shadow: 0px 0px 2px darkgrey;
 }
-.event-al{
-	width:20%;
-	height:100%;
-}
-.event-al .event-component-al{
+.event-component-al{
 	float:left;
+	font-family:open sans;
+	text-align:center;
 }
-.event-al #event-details-list-al li{
+#event-details-list-al li{
 	list-style-type: none;
 	padding:20%;
 	text-align: center;
 	//border-bottom:1px solid white;
 	box-shadow: 0px 0px 2px white;
 }
-.event-al #event-details-list-al li:nth-child(odd){
+#event-details-list-al li:nth-child(odd){
 	background:#ababab;
+}
+#event-details-al{
+	float: left;
+	padding:10px;
+	width: 1100px;
+	height:100%;
+	margin-left:20px;
+	box-shadow: 1px 1px 5px grey;
+	background: #E5E5E5;
 }
 @keyframes forsponsor{
 	0%{transform: translateY(0px);}
