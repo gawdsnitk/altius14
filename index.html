@@ -233,7 +233,7 @@
 			var society_name = $(this).attr('data-society');
 			loadEvents(society_name);
 		});
-		$('.eventsBoxList-al li').on('click',function(event){
+		$('body').on('click','.eventsBoxList-al li',function(event){
 			event.preventDefault();
 			$('#events').css('transform','translateX(-8000px)');
 			var event_id = $(this).find("span").html();
