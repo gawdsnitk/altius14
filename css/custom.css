@@ -85,7 +85,6 @@ a:hover, a:active, a:focus{
 	background-image: url('../images/back1.jpg');
 	background-repeat: no-repeat;
 	background-position: 20px;
-	//background:-moz-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,0)); 
 	color:#D4801D;
 	min-height:100%;
 }
@@ -325,6 +324,9 @@ a:hover, a:active, a:focus{
 	color:white;
 	cursor:pointer;
 }
+#event-details-list-al .active{
+	font-weight:bold;
+}
 #event-details-list-al li:hover{
 	text-decoration: underline;
 }
@@ -338,6 +340,9 @@ a:hover, a:active, a:focus{
 	background: #E5E5E5;
 	padding-right:50px;
 	text-align: justify;
+}
+#eventCategory,#eventDash{
+	color:blue;
 }
 @keyframes forsponsor{
 	0%{transform: translateY(0px);}
