@@ -74,10 +74,9 @@
 					<li data-society="none"><a class="navLink" href="#" id="eventCategory">&larr; Go back to home page</a></li>
 				</ul>
 				<div class="eventsList-al">
-					There are six societies which organise Altius. Events organised by these societies have no bar of branch. Anyone, not from final year,
-					can take part in any event organised by any society. Click any Society name on the left to check out all the events.
 					<ul class="eventsBoxList-al">
-					
+						There are six societies which organise Altius. Events organised by these societies have no bar of branch. Anyone, not from final year,
+					can take part in any event organised by any society. Click any Society name on the left to check out all the events.
 					</ul>
 				</div>
 			</div>
@@ -241,6 +240,7 @@
 	
 	function loadEvents(society){
 		$('.eventsBoxList-al').html('');
+		//$('.eventsBoxList-al').css('
 		$.get( 'altius/bySociety.php?society='+society, function(data){
 			var object = JSON.parse(data);
 			var i;

@@ -286,6 +286,12 @@ a:hover, a:active, a:focus{
 	box-shadow: 1px 1px 5px grey;
 	background: #E5E5E5;
 }
+.eventsBoxList-al{
+	padding:50px 100px;
+	font-size:1.5em;
+	text-align: center;
+	font-family:tahoma;
+}
 .eventsBoxList-al li{
 	list-style-type: none;
 	display: inline-block;
