@@ -240,7 +240,9 @@
 	
 	function loadEvents(society){
 		$('.eventsBoxList-al').html('');
-		//$('.eventsBoxList-al').css('
+		$('.eventsBoxList-al').css('padding','0');
+		$('.eventsBoxList-al').css('font-size','1em');
+		$('.eventsBoxList-al').css('text-align','justify');
 		$.get( 'altius/bySociety.php?society='+society, function(data){
 			var object = JSON.parse(data);
 			var i;
