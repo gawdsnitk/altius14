@@ -181,11 +181,6 @@
 			$(target+'-link').addClass('active');
 		});
 					
-		/*$.ajax({
-			url : 'example.com',
-			type: 'GET',
-			success : handleData
-		});*/
 		
 		$(window).scroll(function() {
 			if($(document).scrollTop()!=0){
@@ -244,7 +239,22 @@
 			},1000);
             event.preventDefault();
         });*/
+		$('.categoryList-al li').bind('click',function(){
+			console.log($(this).attr('data-society'));
+			var society_name = $(this).attr('data-society');
+			loadEvents(society_name);
+		});
     });
+	
+	function loadEvents(society){
+	console.log('hey');
+		$.get( 'http://www.altius14.org/altius/bySociety.php?society='+society, function(data){
+		console.log('heyas');
+			console.log(data);
+					//$( ".ad .title" ).html( data );
+					//alert( "Load was performed." );
+		});
+	}
 	
 			</script>
 	<!-- --------------------------- ->
