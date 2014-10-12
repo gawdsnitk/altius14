@@ -242,6 +242,7 @@
 		});
 		$('#event-details-list-al li').click(function(){
 			var entity = $(this).attr('data-entity');
+			console.log(entity);
 			$('#event-details-list-al li').removeClass('active');
 			$(this).addClass('active');
 			$('#event-details-al').html('');
@@ -262,7 +263,7 @@
 				}
 			}
 			else if(entity=='none'){
-				$('#events').css('transform','translateX(-4000px)');
+				$('#events').css('transform','translateX(0px)');
 			}
 		});
 		
