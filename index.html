@@ -184,21 +184,6 @@
 				$('.navbar-brand img').css('height','40');
 			}
 			
-			/*if(!scroll_with_click){
-				var position = 33.3333333333333*120;
-				if($(document).scrollLeft()<position)
-				$('html, body').stop().animate({
-					scrollLeft: $('#eventHead').offset().left
-				}, 1000);
-				else if($(document).scrollLeft()>=position&&$(document).scrollLeft()<2*position)
-					$('html, body').stop().animate({
-					scrollLeft: $('#eventGroups').offset().left
-				}, 1000);
-				else
-				$('html, body').stop().animate({
-					scrollLeft: $('#event').offset().left
-				}, 1000);
-			}*/
 		});
 		
 		$('#eventName').bind('click',function(e){
@@ -209,23 +194,13 @@
 			e.preventDefault();
 			$('#events').css('transform','translateX(0px)');
 		});
-        /*$('a.navLink').bind('click',function(event){
-			scroll_with_click = true;
-            var $anchor = $(this);
-                    /*
-                    if you want to use one of the easing effects:
-                    $('html, body').stop().animate({
-                        scrollLeft: $($anchor.attr('href')).offset().left
-                    }, 1500,'easeInOutExpo');
-                     */
-           /* $('html, body').stop().animate({
-                scrollLeft: $($anchor.attr('href')).offset().left
-            }, 1500,'easeInOutExpo');
-			setTimeout(function(){
-				scroll_with_click = false;
-			},1000);
-            event.preventDefault();
-        });*/
+		
+		$('#eventDash').bind('click',function(e){
+		console.log('sfsd');
+			e.preventDefault();
+			$('#events').css('transform','translateX(-4000px)');
+		});
+
 		$('.categoryList-al li').bind('click',function(event){
 			event.preventDefault();
 			var society_name = $(this).attr('data-society');
@@ -242,7 +217,6 @@
 		});
 		$('#event-details-list-al li').click(function(){
 			var entity = $(this).attr('data-entity');
-			console.log(entity);
 			$('#event-details-list-al li').removeClass('active');
 			$(this).addClass('active');
 			$('#event-details-al').html('');
@@ -261,9 +235,6 @@
 					}
 					$('#event-details-al').append('<br>');
 				}
-			}
-			else if(entity=='none'){
-				$('#events').css('transform','translateX(-4000px)');
 			}
 		});
 		
