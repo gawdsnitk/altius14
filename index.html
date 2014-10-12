@@ -83,11 +83,10 @@
 			<div class="horizontalSection-al black-al" id="event">
 				<div class="event-al">
 					<ul class="event-component-al" id="event-details-list-al">
-						<li>Description</li>
-						<li>Rules and Regulations</li>
-						<li>Problem Statement</li>
-						<li>Time and Venue</li>
-						<li>Coordinators</li>
+						<li data-entity="description">Description</li>
+						<li data-entity="rules">Rules and Regulations</li>
+						<li data-entity="timevenue">Time and Venue</li>
+						<li data-entity="contact">Coordinators</li>
 					</ul>
 					<div class="event-component-al" id="event-details-al">
 					ggfhj
@@ -238,6 +237,26 @@
 			$('#events').css('transform','translateX(-8000px)');
 			var event_id = $(this).find("span").html();
 			loadEventDetails(event_id);
+		});
+		$('#event-details-list-al li').click(function(){
+			var entity = $(this).attr('data-entity');
+			$('#event-details-al').html('');
+			if(entity!='timevenue'&&entity!='contact'){
+				$('#event-details-al').html(current_event_obj[entity]);
+			}
+			else if(entity=='timevenue'){
+				$('#event-details-al').append('Time: '+current_event_obj['time']+<br>+'Venue: '+current_event_obj['venues']);
+			}
+			else if(entity=='contact'){	
+				for(var i=1;i<=4;++i){
+					if(current_event_obj['coordinator'+i]!=''){
+					$('#event-details-al').append(current_event_obj['coordinator'+i]);
+					if(current_event_obj['phone'+i]!='0')
+						$('#event-details-al').append(' '+current_event_obj['phone'+i]);
+					}
+					$('#event-details-al').append('<br>');
+				}
+			}
 		});
 		
     });
