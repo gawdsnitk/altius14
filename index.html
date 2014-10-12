@@ -228,12 +228,12 @@
 			},1000);
             event.preventDefault();
         });*/
-		$('.categoryList-al li').bind('click',function(){
+		$('.categoryList-al li').bind('click',function(event){
 			event.preventDefault();
 			var society_name = $(this).attr('data-society');
 			loadEvents(society_name);
 		});
-		$('.eventsBoxList-al li').bind('click',function(){
+		$('.eventsBoxList-al li').bind('click',function(event){
 			event.preventDefault();
 			$('#events').css('transform','translateX(-8000px)');
 			var event_id = $(this).find("span").html();
