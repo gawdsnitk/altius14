@@ -2,10 +2,24 @@
 	src:'../fonts/PassionOne-Bold.otf';
 	font-family: 'passion';
 }
+@font-face{
+	src:'../fonts/timeburner_regular.ttf';
+	font-family: 'timeburner';
+}
+@font-face{
+	src:'../fonts/Quicksand-Light.otf';
+	font-family: 'quicksand';
+}
+@font-face{
+	src:'../fonts/opensans-light-webfont.ttf';
+	font-family: 'open sans';
+}
 body,html{
 	width:100%;
 	height:100%;
-	//overflow-x: hidden;
+}
+body{
+	overflow: hidden;
 }
 a:hover, a:active, a:focus{
 	outline: 0;
@@ -23,9 +37,12 @@ a:hover, a:active, a:focus{
 	color:grey !important;
 	font-family: open sans;
 }
+.nav-al a:hover{
+	text-decoration:underline !important;
+}
 .nav-al .active a{
 	background:none !important;
-	color:red !important;
+	font-weight:bold
 }
 .navbar-brand img{
 	height:40px;
@@ -34,6 +51,7 @@ a:hover, a:active, a:focus{
 
 /*Sections style*/
 .section-al{
+	position:relative;
 	padding-top:50px;
 	width:100%;
 }
@@ -50,6 +68,17 @@ a:hover, a:active, a:focus{
 }
 #home h1,#home h2{
 	color:white;
+}
+#home .fest-name-al{
+	font-family:timeburner;
+	font-weight:bold;
+	font-size:5em;
+}
+#home .fest-quote-al{
+	font-family:quicksand;
+}
+#home .fest-date-al{
+	font-family:quicksand;
 }
 #about{
 	text-align: center;	
@@ -73,25 +102,112 @@ a:hover, a:active, a:focus{
 	//background:red;//black;
 	color:white;
 	//text-align:center;
+	transition:all 1.5s ease-in;
 }
 #events h1{
 	font-size:5em;
 	margin-top:15%;
-	font-family: 
 }
 .down-arrow-al{
-	display: inline-block;
-	border-radius: 50% 0%;
-	border:1px solid white;
+	font-size:1.5em;
 	color:white;
 	padding:20px;
+	font-family:quicksand;
+	position:absolute;
+	bottom:20px;
+	left:41%;
+}
+.down-arrow-al:hover{
+	text-decoration:underline;
+	color:white;
+}
+#contact{
+	height:100%;
+}
+#contact{
+	text-align: center;
+}
+#contact ul li{
+	list-style-type: none;
+	width:20%;
+	height:200px;
+	display: inline-block;
+	margin:30px 5%;
+	text-align:center;
+	color:grey;
+}
+#contact ul li .society{
+	font-family: timeburner;
+	font-size:2.5em;
+}
+#contact ul li .president{
+	font-family: tahoma;
+	font-size:1.5em;
+}
+#contact ul li .phone{
+	font-family: courier;
+	font-size: 1.2em;
+}
+#sponsors{
+	display: inline-block;
+	min-height:100%;
+	background:#1C869E;
+	text-align: center;
+	color:white;
+	font-family:times;
+}
+#sponsors h1{
+	margin-top:150px;
+}
+#credits{
+	width:80%;
+	height:25%;
+	background:black;
+	text-align:center;
+}
+#credits a{
+	font-family:timeburner;
+	color:white;
+	font-size:3em;
+}
+#credits a:hover{
+	text-shadow:1px 1px 5px white;
+}
+@keyframes fly{
+	0%{
+		left:0%;
+		bottom:0%;
+		font-size:0em;
+	}
+	50%{
+		left:50%;
+		bottom:100%;
+		transform: rotate(90deg);
+		font-size:2em;
+	}
+	100%{
+		left:100%;
+		bottom:0%;
+		font-size:0em;
+	}
+}
+#credits .fa-rocket{
+	position: absolute;
+	color:white;
+	animation: fly 20s infinite linear;
+}
+#credits .fa-tree{
+	color: white;
+	top:60%;
+	margin-top:3.5%;
+	margin-left:10px;
 }
 
 /*Horizontal Events*/
 .horizontalSection-al{
   margin:0px;
   bottom:0px;
-  width:33.3333333333333%;
+  width:4000px;
   float:left;
   height:100%;
 	padding-top:50px;
@@ -111,6 +227,9 @@ a:hover, a:active, a:focus{
 }
 .horizontalSection-al .eventBox-al i{
 	font-size:3em;
+}
+#eventName:hover{
+	text-shadow:1px 1px 20px white;
 }
 .black-al{
     color:#fff;
@@ -201,4 +320,15 @@ a:hover, a:active, a:focus{
 }
 .event-al #event-details-list-al li:nth-child(odd){
 	background:#ababab;
+}
+@keyframes forsponsor{
+	0%{transform: translateY(0px);}
+	10%{transform: translateY(-5px);}
+	30%{transform: translateY(-8px);}
+	50%{transform: translateY(-8px);}
+	70%{transform: translateY(-5px);}
+	100%{transform: translateY(0px);}
+}
+#forSponsor-al{
+	animation: forsponsor 1s infinite;
 }
