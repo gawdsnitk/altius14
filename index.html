@@ -82,7 +82,7 @@
 			</div>
 			<div class="horizontalSection-al white-al" id="event">
 				<ul class="event-component-al" id="event-details-list-al">
-						<li data-entity="description">Description</li>
+						<li data-entity="description" class="active">Description</li>
 						<li data-entity="rules">Rules and Regulations</li>
 						<li data-entity="timevenue">Time and Venue</li>
 						<li data-entity="contact">Coordinators</li>
@@ -238,6 +238,8 @@
 		});
 		$('#event-details-list-al li').click(function(){
 			var entity = $(this).attr('data-entity');
+			$('#event-details-list-al li').removeClass('active');
+			$(this).addClass('active');
 			$('#event-details-al').html('');
 			if(entity!='timevenue'&&entity!='contact'){
 				$('#event-details-al').html(current_event_obj[entity]);
@@ -275,7 +277,9 @@
 	
 	function loadEventDetails(event){
 		$.get( 'altius/allDetail.php?id='+event, function(data){
-			current_event_obj = JSON.parse(data); 	
+			current_event_obj = JSON.parse(data);
+			$('#event-details-list-al li:nth-child(1)').addClass('active');
+			$('#event-details-al').html(current_event_obj['description']);
 		});
 	}
 	
