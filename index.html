@@ -89,7 +89,7 @@
 						<li>Time and Venue</li>
 						<li>Coordinators</li>
 					</ul>
-					<div class="event-component-al">
+					<div class="event-component-al" id="event-details-al">
 					ggfhj
 					</div>
 				</div>
@@ -153,7 +153,9 @@
 	<script src="js/jquery.easing.1.3.js"></script>
     <script src="js/bootstrap.min.js"></script>
 	<script>
+	var current_event_obj;
 	$(function() {
+		current_event_obj;
 		if($(document).scrollTop()!=0){
 				$('.navbar').css('padding','0');
 				$('.navbar-brand img').css('height','30');
@@ -201,11 +203,6 @@
 			}*/
 		});
 		
-		$('.eventsBoxList-al li').click(function(event){
-			event.preventDefault();
-			$('#events').css('transform','translateX(-8000px)');
-		});
-		
 		$('#eventName').bind('click',function(e){
 			e.preventDefault();
 			$('#events').css('transform','translateX(-4000px)');
@@ -232,10 +229,17 @@
             event.preventDefault();
         });*/
 		$('.categoryList-al li').bind('click',function(){
-			console.log($(this).attr('data-society'));
+			event.preventDefault();
 			var society_name = $(this).attr('data-society');
 			loadEvents(society_name);
 		});
+		$('.eventsBoxList-al li').bind('click',function(){
+			event.preventDefault();
+			$('#events').css('transform','translateX(-8000px)');
+			var event_id = $(this).find("span").html();
+			loadEventDetails(event_id);
+		});
+		
     });
 	
 	function loadEvents(society){
@@ -247,11 +251,14 @@
 			var object = JSON.parse(data);
 			var i;
 			for(i in object){
-				$('.eventsBoxList-al').append('<li>'+object[i]['eventname']+'</li>');
+				$('.eventsBoxList-al').append('<li>'+object[i]['eventname']+'<span>'+object[i]['eventid']+'</span></li>');
 			}
-			console.log(object[0]['eventname']);
-					//$( ".ad .title" ).html( data );
-					//alert( "Load was performed." );
+		});
+	}
+	
+	function loadEventDetails(event){
+		$.get( 'altius/allDetail.php?id='+event, function(data){
+			current_event_obj = JSON.parse(data); 	
 		});
 	}
 	

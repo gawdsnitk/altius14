@@ -307,6 +307,9 @@ a:hover, a:active, a:focus{
 	cursor:pointer;
 	font-family:open sans;
 }
+.eventsBoxList-al li span{
+	display: none;
+}
 .active-al{
 	box-shadow: 0px 0px 2px darkgrey;
 }
