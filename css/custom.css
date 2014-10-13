@@ -292,9 +292,9 @@ a:hover, a:active, a:focus{
 .eventsBoxList-al li{
 	list-style-type: none;
 	display: inline-block;
-	width:100px;
+	min-width:100px;
 	height:100px;
-	line-height: 100px;
+	padding-top:20px;
 	text-align: center;
 	background:white;
 	border-radius: 2px;	
