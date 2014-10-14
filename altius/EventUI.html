@@ -109,10 +109,14 @@
 		function register() {
 			if($('#eventName').val()==''||$('#coordinator1').val()==''||$('#phone1').val()=='')
 				return;
+			var description = $('#eventdescription').val();
+			var rules = $('#eventRules').val();
+			description = description.replace(/(?:\r\n|\r|\n)/g,'<br/>');
+			rules = rules.replace(/(?:\r\n|\r|\n)/g,'<br/>');
 			var data = {
 				"eventname"	: 	$('#eventName').val(),
-				"description"	: 	$('#eventdescription').val(),
-				"rules"		: 	$('#eventRules').val(),
+				"description"	: 	description,
+				"rules"		: 	rules,
 				"coordinator1"	: 	$('#coordinator1').val(),
 				"coordinator2"	: 	$('#coordinator2').val(),
 				"coordinator3"	: 	$('#coordinator3').val(),
